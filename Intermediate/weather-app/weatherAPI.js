@@ -2,7 +2,7 @@
 const city = document.querySelector("#city");
 const temp = document.querySelector("#temp");
 const desc = document.querySelector("#desc");
-const api = "b1cc3ff984309b902ba7bf90b631674b";
+const api = "//ENTER YOUR API KEY";
 
 
 async function fetchData() {
