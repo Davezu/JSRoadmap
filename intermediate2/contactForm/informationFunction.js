@@ -13,6 +13,6 @@ form.addEventListener("submit", (event) => {
         message.textContent = "Thank you for your submission!";
         names.value = "";
         email.value = "";
-        textarea.value = "";
+         textarea.value = "";
     }
 });
