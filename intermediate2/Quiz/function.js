@@ -60,5 +60,3 @@ submit.addEventListener('click', () => {
   }
 });
 
-
-
