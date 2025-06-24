@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Field Reservation System</title>
+</head>
+<body>
+    <div class="reservation-container">
+        <h1>Field Reservation System</h1>
+        <input type="text" id="reservation" placeholder="Enter your name">
+        <input type="date" id="date">
+        <input type="time" id="time">
+        <select name="booking" id="booking-options">
+            <option>Choose a field</option>
+            <option>Field A</option>
+            <option>Field B</option>
+        </select>
+        <button id="submitBooking">Book Now!</button>
+
+        <ul id="booking-summary"></ul>
+    </div>
+    <script src="reservationFunction.js"></script>
+</body>
+</html>
