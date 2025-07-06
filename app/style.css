@@ -1,5 +1,3 @@
-/* Professional Portfolio Design */
-
 * {
     margin: 0;
     padding: 0;
@@ -31,8 +29,6 @@ body::before {
     pointer-events: none;
 }
 
-
-
 .main-container {
     display: flex;
     flex-direction: column;
@@ -43,8 +39,7 @@ body::before {
     position: relative;
     z-index: 2;
 }
-
-/* AOS Fix - Hide elements before AOS initializes */
+/* AOS */
 [data-aos] {
     opacity: 0;
     transition-property: opacity;
@@ -54,7 +49,6 @@ body::before {
     opacity: 1;
 }
 
-/* Professional Typography */
 h3 {
     font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 200;
@@ -70,7 +64,7 @@ h3 span {
     transition: all 0.3s ease;
 }
 
-/* Simple Professional Button Design */
+/* Button Design */
 #animateBtn {
     position: relative;
     padding: 1rem 2.5rem;
@@ -105,7 +99,7 @@ h3 span {
     transform: translateY(0);
 }
 
-/* Simple Modal Design */
+/* Modal Design */
 .simple-modal {
     position: fixed;
     top: 0;
@@ -162,11 +156,6 @@ h3 span {
     background: rgba(255, 255, 255, 0.02);
     color: rgba(255, 255, 255, 0.5);
 }
-
-
-
-
-
 /* Responsive design */
 @media (max-width: 768px) {
     .main-container {
@@ -181,8 +170,6 @@ h3 span {
         padding: 0.8rem 2rem;
         font-size: 0.9rem;
     }
-    
-
 }
 
 /* Accessibility */
@@ -192,8 +179,6 @@ h3 span {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-    
-
 }
 
 /* High contrast mode */
