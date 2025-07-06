@@ -3,12 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>📅 Day of Week Calculator</title>
 </head>
 <body>
-    <input type="date" id="weekInput" placeholder="Enter(YYYY-MM-DD)">
-    <button id="button">Check</button><br/>
-    <p id="res">Result</p>
+    <div class="container">
+        <header class="header">
+            <h1>📅 Day of Week Calculator</h1>
+            <p>Find out what day of the week any date falls on</p>
+        </header>
+        
+        <main class="calculator">
+            <section class="input-section">
+                <div class="input-container">
+                    <label for="weekInput">🗓️ Select a Date:</label>
+                    <input type="date" id="weekInput">
+                    <button class="btn" id="button">
+                        <span class="btn-icon">🔍</span>
+                        <span class="btn-text">Find Day</span>
+                    </button>
+                </div>
+            </section>
+            
+            <section class="result-section">
+                <div class="result-display">
+                    <p id="res">Select a date and click "Find Day" to see the result</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    
     <script src="function.js"></script>
 </body>
 </html>

@@ -1,78 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mock Exam</title>
-    <style>
-        .form-step {
-            display: none;
-        }
-
-        .form-step.active {
-            display: block;
-        }
-
-        button {
-            margin-top: 10px;
-        }
-        #retake {
-            display: none;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📝 Math Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Mock Exam</h1>
+    <div class="container">
+        <header class="header">
+            <h1>📝 Math Quiz</h1>
+            <p>Test your basic math skills with this quick quiz</p>
+        </header>
 
-    <form id="form0" class="form-step active">
-        <p>1 + 1?</p>
-        <input type="radio" name="ans1" id="ans1" value="1">
-        <label for="ans1">2</label>
+        <main class="quiz-container">
+            <form id="form0" class="form-step active">
+                <div class="question-card">
+                    <div class="question-number">Question 1 of 3</div>
+                    <h2 class="question-text">What is 1 + 1?</h2>
+                    
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" name="ans1" id="ans1" value="1">
+                            <label for="ans1">2</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="ans1" id="ans2" value="0">
+                            <label for="ans2">4</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="ans1" id="ans3" value="0">
+                            <label for="ans3">3</label>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn" id="next0">
+                        <span class="btn-text">Next Question</span>
+                        <span class="btn-icon">➡️</span>
+                    </button>
+                </div>
+            </form>
 
-        <input type="radio" name="ans1" id="ans2" value="0">
-        <label for="ans2">4</label>
+            <form id="form1" class="form-step">
+                <div class="question-card">
+                    <div class="question-number">Question 2 of 3</div>
+                    <h2 class="question-text">What is 2 + 2?</h2>
+                    
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" name="ans2" id="ans4" value="0">
+                            <label for="ans4">3</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="ans2" id="ans5" value="1">
+                            <label for="ans5">4</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="ans2" id="ans6" value="0">
+                            <label for="ans6">5</label>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn" id="next1">
+                        <span class="btn-text">Next Question</span>
+                        <span class="btn-icon">➡️</span>
+                    </button>
+                </div>
+            </form>
 
-        <input type="radio" name="ans1" id="ans3" value="0">
-        <label for="ans3">3</label>
+            <form id="form2" class="form-step">
+                <div class="question-card">
+                    <div class="question-number">Question 3 of 3</div>
+                    <h2 class="question-text">What is 3 - 3?</h2>
+                    
+                    <div class="options">
+                        <div class="option">
+                            <input type="radio" name="ans3" id="ans7" value="1">
+                            <label for="ans7">0</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="ans3" id="ans8" value="0">
+                            <label for="ans8">4</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="ans3" id="ans9" value="0">
+                            <label for="ans9">3</label>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn" id="submit">
+                        <span class="btn-text">Submit Quiz</span>
+                        <span class="btn-icon">✅</span>
+                    </button>
+                </div>
+            </form>
 
-        <button type="button" id="next0">Next</button>
-    </form>
-
-    <form id="form1" class="form-step">
-        <p>2 + 2?</p>
-        <input type="radio" name="ans2" id="ans4" value="0">
-        <label for="ans4">3</label>
-
-        <input type="radio" name="ans2" id="ans5" value="1">
-        <label for="ans5">4</label>
-
-        <input type="radio" name="ans2" id="ans6" value="0">
-        <label for="ans6">5</label>
-
-        <button type="button" id="next1">Next</button>
-    </form>
-
-    <form id="form2" class="form-step">
-        <p>3 - 3?</p>
-        <input type="radio" name="ans3" id="ans7" value="1">
-        <label for="ans7">0</label>
-
-        <input type="radio" name="ans3" id="ans8" value="0">
-        <label for="ans8">4</label>
-
-        <input type="radio" name="ans3" id="ans9" value="0">
-        <label for="ans9">3</label>
-
-        <button type="button" id="submit">Submit</button>
-        
-    </form>
-    <div id="result">
-        <p id="scoreText"></p>
-        <button type="button" id="retake" style="display: none;">Retake</button>
+            <div id="result" class="result-container">
+                <div class="result-card">
+                    <div class="result-icon">🎉</div>
+                    <p id="scoreText"></p>
+                    <button type="button" class="btn secondary" id="retake">
+                        <span class="btn-icon">🔄</span>
+                        <span class="btn-text">Retake Quiz</span>
+                    </button>
+                </div>
+            </div>
+        </main>
     </div>
+
     <script src="function.js"></script>
 </body>
-
 </html>

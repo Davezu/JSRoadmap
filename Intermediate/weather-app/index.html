@@ -3,18 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>🌤️ Weather App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="user-input">
-        <input type="text" id="userInput" placeholder="City Name">
-        <button id="submit" onclick="fetchData()">Check Weather</button>
+    <div class="container">
+        <header class="header">
+            <h1>🌤️ Weather App</h1>
+            <p>Get current weather information for any city</p>
+        </header>
+        
+        <main>
+            <div class="user-input">
+                <div class="input-group">
+                    <label for="userInput">🌍 Enter City Name:</label>
+                    <input type="text" id="userInput" placeholder="e.g., New York, London, Tokyo">
+                </div>
+                <button id="submit" onclick="fetchData()">🔍 Check Weather</button>
+            </div>
+            
+            <div class="weather-info" id="weatherDisplay">
+                <div class="default-state">
+                    <div class="weather-icon">🌍</div>
+                    <p id="city">Enter a city name to get started</p>
+                    <p id="temp">--°</p>
+                    <p id="desc">Weather information will appear here</p>
+                </div>
+            </div>
+        </main>
     </div>
-    <div class="weather-info">
-        <p id="city">City Name</p>
-        <p id="temp">Temperature</p>
-        <p id="desc">Weather Description</p>
-    </div>
+    
     <script src="weatherAPI.js"></script>
 </body>
 </html>

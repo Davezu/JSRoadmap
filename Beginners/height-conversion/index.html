@@ -4,18 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>📏 Height Converter</title>
 </head>
 <body>
-    <h1>Height Conversion</h1>
-    <div>
-        <div>
-            <input type="text" id="feet" placeholder="Enter a feet"><br/>
-            <input type="text" id="inch" placeholder="Enter a inches">
-        </div>
-            <button id="convert">Convert</button>
-            <p id="result"></p>
+    <div class="container">
+        <header class="header">
+            <h1>📏 Height Converter</h1>
+            <p>Convert between feet/inches and centimeters easily</p>
+        </header>
+        
+        <main class="converter-container">
+            <div class="input-section">
+                <label>🦶 Enter Height in Feet & Inches</label>
+                <div class="input-group">
+                    <input type="number" id="feet" placeholder="Feet" min="0">
+                    <span class="unit-label">ft</span>
+                    <input type="number" id="inch" placeholder="Inches" min="0" max="11">
+                    <span class="unit-label">in</span>
+                </div>
+            </div>
+            
+            <div class="convert-section">
+                <button class="btn" id="convert">
+                    <span class="btn-icon">🔄</span>
+                    <span class="btn-text">Convert</span>
+                </button>
+            </div>
+            
+            <div class="result-section">
+                <div class="result-display">
+                    <p id="result">Enter your height and click convert</p>
+                </div>
+            </div>
+        </main>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

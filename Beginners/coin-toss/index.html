@@ -3,13 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>🪙 Coin Toss Game</title>
 </head>
 <body>
-    <button class="btn" id="heads">Heads</button>
-    <button class="btn" id="tails">Tails</button>
-    <p id="res"></p>
-
+    <div class="container">
+        <header class="header">
+            <h1>Coin Toss Game</h1>
+            <p>Make your prediction and flip the coin!</p>
+        </header>
+        
+        <main class="game-area">
+            <section class="prediction-section">
+                <h3>🎯 Make Your Prediction</h3>
+                <div class="prediction-buttons">
+                    <button class="btn" id="heads">
+                        <span class="btn-icon">👑</span>
+                        <span class="btn-text">Heads</span>
+                    </button>
+                    <button class="btn" id="tails">
+                        <span class="btn-icon">🦅</span>
+                        <span class="btn-text">Tails</span>
+                    </button>
+                </div>
+            </section>
+            
+            <section class="result-section">
+                <div class="result-display">
+                    <p id="res">Choose heads or tails to start the game!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

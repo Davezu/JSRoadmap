@@ -3,15 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number-Guessing</title>
+    <link rel="stylesheet" href="style.css">
+    <title>🎯 Number Guessing Game</title>
 </head>
 <body>
-    <h1>Guess The Number</h1>
-
-    <input type="number" id="guess" placeholder="What's your guess?">
-    <button id="submit">Check</button>
-    <p id="result"></p>
-
+    <div class="container">
+        <header class="header">
+            <h1>🎯 Guess The Number</h1>
+            <p>I'm thinking of a number between 1 and 100. Can you guess it?</p>
+        </header>
+        
+        <main class="game-area">
+            <section class="input-section">
+                <div class="guess-container">
+                    <label for="guess">🤔 What's your guess?</label>
+                    <input type="number" id="guess" placeholder="Enter a number between 1-100" min="1" max="100">
+                    <button class="btn" id="submit">
+                        <span class="btn-icon">✨</span>
+                        <span class="btn-text">Check Guess</span>
+                    </button>
+                </div>
+            </section>
+            
+            <section class="result-section">
+                <div class="result-display">
+                    <p id="result">Make your first guess to start the game!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

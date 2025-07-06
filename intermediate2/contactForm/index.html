@@ -3,22 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>📞 Contact Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <form action="" id="form">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name">
-
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email">
-
-            <label for="text">message</label>
-            <textarea style="margin-top: 30px;" tname="textinof" id="textarea" placeholder="Enter message"></textarea>
+    <div class="container">
+        <header class="header">
+            <h1>📞 Contact Form</h1>
+            <p>Get in touch with us using the form below</p>
+        </header>
         
-            <button type="submit" id="btn">Submit</button>
-        </form>
-        <p class="message">test</p>
+        <main class="contact-container">
+            <form id="form" class="contact-form">
+                <div class="input-group">
+                    <label for="name">👤 Your Name:</label>
+                    <input type="text" id="name" placeholder="Enter your full name">
+                </div>
+
+                <div class="input-group">
+                    <label for="email">📧 Email Address:</label>
+                    <input type="email" id="email" placeholder="Enter your email address">
+                </div>
+
+                <div class="input-group">
+                    <label for="textarea">💬 Your Message:</label>
+                    <textarea id="textarea" placeholder="Enter your message here..." rows="5"></textarea>
+                </div>
+            
+                <button type="submit" class="btn">
+                    <span class="btn-icon">📤</span>
+                    <span class="btn-text">Send Message</span>
+                </button>
+            </form>
+            
+            <div class="message-container">
+                <p class="message"></p>
+            </div>
+        </main>
+    </div>
+    
     <script src="informationFunction.js"></script>
 </body>
 </html>

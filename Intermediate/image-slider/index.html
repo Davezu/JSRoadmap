@@ -3,14 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>🖼️ Image Slider</title>
 </head>
 <body>
-    <div class="img">
-        <img src="./img/img1.PNG" alt="" srcset="">
+    <div class="container">
+        <header class="header">
+            <h1>🖼️ Image Slider</h1>
+            <p>Navigate through our image gallery</p>
+        </header>
+        
+        <main class="slider-container">
+            <div class="img">
+                <img src="./img/img1.PNG" alt="Gallery Image">
+            </div>
+            
+            <div class="controls">
+                <button class="btn" id="back" onclick="btnb()">
+                    <span class="btn-icon">◀️</span>
+                    <span class="btn-text">Previous</span>
+                </button>
+                <button class="btn" id="next" onclick="btnx()">
+                    <span class="btn-text">Next</span>
+                    <span class="btn-icon">▶️</span>
+                </button>
+            </div>
+        </main>
     </div>
-    <button class="btn" id="next" onclick="btnx()">next</button>
-    <button class="btn" id="back" onclick="btnb()">back</button>
 
     <script src="script.js"></script>
 </body>

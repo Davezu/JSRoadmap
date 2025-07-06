@@ -3,16 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Count-your-Word</title>
+    <link rel="stylesheet" href="style.css">
+    <title>📝 Word Counter</title>
 </head>
 <body>
-    <h1> Count your Word</h1>
-        <textarea type="text" id="textInput"  placeholder="Type or paste your text here..."></textarea><br>
-        <button id="btn">Count Words</button>
-
-        <p id="result"></p>
-
-
-        <script src="function.js"></script>
+    <div class="container">
+        <header class="header">
+            <h1>📝 Word Counter</h1>
+            <p>Analyze your text with word counting</p>
+        </header>
+        
+        <main class="word-counter">
+            <section class="input-section">
+                <div class="input-container">
+                    <label for="textInput">✍️ Enter your text:</label>
+                    <textarea 
+                        id="textInput" 
+                        placeholder="Start typing or paste your text here..."
+                        rows="6"
+                    ></textarea>
+                    <button class="btn" id="btn">
+                        <span class="btn-icon">📊</span>
+                        <span class="btn-text">Count Words</span>
+                    </button>
+                </div>
+            </section>
+            
+            <section class="result-section">
+                <div class="result-display">
+                    <p id="result">Enter text and click "Count Words" to see the result</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="function.js"></script>
 </body>
 </html>

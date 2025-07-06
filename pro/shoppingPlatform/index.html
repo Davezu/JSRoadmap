@@ -3,19 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>🛍️ Shopping Platform</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="product-list">
-        <h1>Nike</h1>
-        <p>Price: 299</p>
+    <div class="container">
+        <main class="main-content">
+            <header class="header">
+                <h1>🛍️ Premium Store</h1>
+                <p>Your favorite Nike products</p>
+            </header>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">👟</div>
+                    <div class="product-info">
+                        <h2>Nike Shoes</h2>
+                        <div class="product-price">299</div>
+                        <button class="add-to-cart" id="addtocart">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <aside class="cart-sidebar">
+            <div class="cart-header">
+                <h3>🛒 Shopping Cart</h3>
+                <div class="cart-icon">
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </div>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <p>Your cart is empty</p>
+                    <span>Add some products to get started!</span>
+                </div>
+            </div>
+            
+            <div class="cart-total">
+                <div class="total-label">Total:</div>
+                <div class="total-amount" id="totalAmount">₱0</div>
+            </div>
+            
+            <button class="checkout-btn" disabled>
+                Checkout
+            </button>
+        </aside>
     </div>
-    <button id="addtocart">Add to Cart!</button>
-    <details>
-        <label>Cart Section</label>
-        <p id="totalAmount"></p>
-    </details>
-    
+
     <script src="addtoCart.js"></script>
 </body>
 </html>

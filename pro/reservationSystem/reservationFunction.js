@@ -7,6 +7,32 @@ const summary = document.querySelector('#booking-summary');
 
 const bookings = [];
 
+const updateBookingDisplay = () => {
+  if (bookings.length === 0) {
+    summary.innerHTML = '';
+    return;
+  }
+
+  summary.innerHTML = '';
+  bookings.forEach((booking) => {
+    const li = document.createElement('li');
+    li.innerHTML = `
+      <strong>${booking.name}</strong> booked <strong>${booking.pickOptions}</strong>
+      <div class="booking-details">
+        <div class="booking-detail">
+          <div class="booking-detail-label">Date</div>
+          <div class="booking-detail-value">${booking.date}</div>
+        </div>
+        <div class="booking-detail">
+          <div class="booking-detail-label">Time</div>
+          <div class="booking-detail-value">${booking.time}</div>
+        </div>
+      </div>
+    `;
+    summary.appendChild(li);
+  });
+};
+
 button.addEventListener('click', (event) => {
   event.preventDefault();
 
@@ -19,14 +45,24 @@ button.addEventListener('click', (event) => {
     alert('Please Complete all fields');
     return;
   }
-  const isTaken = bookings.some((b) => b.date === date);
+
+  const isTaken = bookings.some(
+    (b) => b.date === date && b.time === time && b.pickOptions === pickOptions
+  );
   if (isTaken) {
-    alert('Sorry, that time is already booked');
+    alert('Sorry, that slot is already booked');
     return;
-  } else {
-    bookings.push({ name, time, date, pickOptions });
   }
-  const li = document.createElement('li');
-  li.textContent = `${name} booked a ${pickOptions} for ${time} on ${date}`;
-  summary.appendChild(li);
+
+  bookings.push({ name, time, date, pickOptions });
+  updateBookingDisplay();
+
+  // Clear form after successful booking
+  userReservation.value = '';
+  pickTime.value = '';
+  pickDate.value = '';
+  options.value = '';
+
+  // Show success message
+  alert('Booking confirmed successfully!');
 });

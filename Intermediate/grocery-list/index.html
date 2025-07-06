@@ -3,17 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>🛒 Grocery List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <input type="text" id="itemInput" placeholder="enter item">
-        <button id="add">Add</button>
+        <header class="header">
+            <h1>🛒 Grocery List</h1>
+            <p>Keep track of your shopping items</p>
+        </header>
+        
+        <main class="grocery-app">
+            <section class="input-section">
+                <div class="input-container">
+                    <label for="itemInput">🥕 Add Item:</label>
+                    <input type="text" id="itemInput" placeholder="e.g., Milk, Bread, Apples">
+                    <button class="btn" id="add">
+                        <span class="btn-icon">➕</span>
+                        <span class="btn-text">Add Item</span>
+                    </button>
+                </div>
+            </section>
+            
+            <section class="list-section">
+                <h3>📝 Your Shopping List:</h3>
+                <ul class="items">
+                    
+                </ul>
+            </section>
+        </main>
     </div>
-    <div class="list">
-        <ul class="items"></ul>
 
-    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -3,17 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="products">
-        <input type="text" id="productName" placeholder="Enter Product Name">
+    <div class="container">
+        <header class="header">
+            <h1>📦 Inventory Management</h1>
+            <p>Add and manage your product inventory efficiently</p>
+        </header>
+        
+        <main>
+            <div class="products">
+                <div class="input-group">
+                    <label for="productName">Product Name</label>
+                    <input type="text" id="productName" placeholder="Enter product name">
+                </div>
+                
+                <div class="input-group">
+                    <label for="qty">Quantity</label>
+                    <input type="number" id="qty" placeholder="Enter quantity" min="1">
+                </div>
+                
+                <button id="submit">Add Product</button>
+            </div>
 
-        <input type="number" id="qty" placeholder="Enter Quantity">
+            <div id="list" class="product-list">
+                <div class="empty-state">No products added yet. Add your first product above!</div>
+            </div>
+        </main>
     </div>
-    <button id="submit">Add</button>
-
-    <p id="list"></p>
 
     <script src="function.js"></script>
 </body>
