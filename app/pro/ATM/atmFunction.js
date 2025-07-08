@@ -8,7 +8,7 @@ buttons.forEach((button) => {
   const actionType = button.getAttribute('data-type');
   button.onclick = () => {
     if (actionType === 'checkBalance') {
-      balance.textContent = `Your Current balance is ${userBalance}`;
+      balance.innerHTML = `Your Current balance is <span style="color:green"> $${userBalance}</span>`;
     } else if (actionType === 'deposit') {
       const currentBalance = Number(userInput.value);
       const input = userInput.value;

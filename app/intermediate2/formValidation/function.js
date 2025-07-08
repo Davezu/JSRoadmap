@@ -13,5 +13,9 @@ submit.addEventListener('click', ()=> {
         alert('invalid email');
     }else{
         alert('Form submitted successfully');
+        names.value = '';
+        email.value = '';
+        password.value = '';
     }
+    
 });

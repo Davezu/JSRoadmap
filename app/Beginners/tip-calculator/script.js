@@ -11,7 +11,7 @@ calculate.addEventListener ("click", () => {
         amountTip.innerHTML = `Please Enter a valid value`
     }else{
     let total = (billVal * tipval) / 100;
-        amountTip.innerHTML = `Total tip is ${total}`;
+        amountTip.innerHTML = `Total tip is <span style="color:green"> $${total}</span>`;
     }   
 });
     

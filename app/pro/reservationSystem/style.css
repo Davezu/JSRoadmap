@@ -1,7 +1,5 @@
-/* Reservation System - Professional Booking Design */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* CSS Reset and Design Variables */
 * {
     margin: 0;
     padding: 0;
@@ -316,7 +314,6 @@ body {
     color: var(--gray-700);
 }
 
-/* Responsive Design */
 @media (max-width: 640px) {
     body {
         padding: var(--space-4);

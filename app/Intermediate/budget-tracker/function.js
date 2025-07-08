@@ -20,7 +20,7 @@ budget.addEventListener('click', () => {
     balance.value = " ";
 });
 add.addEventListener('click', () =>{
-    if (items.value === " " || amount.value === " " || isNaN(parseFloat(amount.value))){
+    if (items.value === " " || amount.value === " " || isNaN(parseFloat(amount.value)) || amount.value <= 0){
         alert("Please enter a valid item and amount");
         return;
     }

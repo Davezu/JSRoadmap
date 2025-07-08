@@ -1,4 +1,3 @@
-/* Image Slider - Simple & Clean */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -183,7 +182,6 @@ body {
     text-align: center;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         padding: var(--space-6);

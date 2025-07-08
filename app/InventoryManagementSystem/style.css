@@ -1,7 +1,5 @@
-/* Inventory Management System - Professional Design */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* CSS Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -221,7 +219,6 @@ button:active {
     padding: var(--space-10);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     body {
         padding: var(--space-4);

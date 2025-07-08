@@ -4,7 +4,7 @@ const cartItems = document.querySelector('#cartItems');
 const cartBadge = document.querySelector('#cartBadge');
 const checkoutBtn = document.querySelector('.checkout-btn');
 
-const products = [];
+let products = [];
 let totalV = 0;
 
 const updateCartDisplay = () => {
@@ -46,5 +46,11 @@ addToCart.addEventListener('click', () => {
   addCart('Nike', 299);
 });
 
-// Initialize cart display
+checkoutBtn.addEventListener('click', () => {
+  alert('Thanks for checking out!');
+  products = [];
+  totalV = 0;
+  updateCartDisplay();
+  total.textContent = '₱0';
+})
 updateCartDisplay();

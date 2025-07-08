@@ -3,7 +3,7 @@ const add = document.querySelector("#add");
 const list = document.querySelector(".items");
 
 add.addEventListener("click", () =>{
-    if (input.value === " "){
+    if (input.value === " " || input.value.trim() === "" || !isNaN(input.value)) {
         alert("Enter a valid item");
         return;
     }

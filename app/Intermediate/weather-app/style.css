@@ -1,7 +1,5 @@
-/* Weather App - Professional Design */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* CSS Reset and Design Variables */
 * {
     margin: 0;
     padding: 0;
@@ -300,8 +298,6 @@ button:active {
 .suggestion-item:last-child {
     border-bottom: none;
 }
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         padding: var(--space-6);

@@ -1,7 +1,5 @@
-/* ATM System - Professional Banking Design */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* CSS Reset and Design Variables */
 * {
     margin: 0;
     padding: 0;
@@ -245,7 +243,6 @@ body {
     line-height: 1.6;
 }
 
-/* Balance amount styling when showing actual balance */
 .balance-display .balance-amount {
     font-size: var(--font-size-2xl);
     font-weight: 700;
@@ -253,7 +250,6 @@ body {
     margin-top: var(--space-2);
 }
 
-/* Responsive Design */
 @media (max-width: 640px) {
     body {
         padding: var(--space-4);

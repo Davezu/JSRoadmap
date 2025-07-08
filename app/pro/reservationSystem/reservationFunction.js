@@ -57,12 +57,11 @@ button.addEventListener('click', (event) => {
   bookings.push({ name, time, date, pickOptions });
   updateBookingDisplay();
 
-  // Clear form after successful booking
+
   userReservation.value = '';
   pickTime.value = '';
   pickDate.value = '';
   options.value = '';
-
-  // Show success message
+  
   alert('Booking confirmed successfully!');
 });

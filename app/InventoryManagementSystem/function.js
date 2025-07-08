@@ -34,12 +34,13 @@ const render = () => {
         inventory[index] = { product: prodValue, qt: quant };
         localStorage.setItem('inventory', JSON.stringify(inventory));
         render();
-        productInput.value = '';
-        quantity.value = '';
+        
       } else {
         alert('Please fill in both product and quantity correctly.');
       }
     });
+        productInput.value = '';
+        quantity.value = '';
     items.appendChild(edit);
     items.appendChild(document.createTextNode(' '));
     items.appendChild(remove);
